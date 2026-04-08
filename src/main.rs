@@ -10,5 +10,5 @@ fn main() {
         NativeOptions::default(),
         Box::new(|cc| Ok(Box::new(app::App::new(cc)))),
     )
-    .expect("Failed to render app!");
+    .expect("Failed to render app! noooo :(");
 }
