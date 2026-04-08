@@ -42,7 +42,7 @@ fn mul_mant_without_resize(num1: i128, num2: i128) -> i128 {
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub struct BigFloat {
     pub mant: i64,
-    exp: i128,
+    pub exp: i128,
 }
 
 impl BigFloat {
