@@ -1,10 +1,14 @@
 use eframe::egui::CentralPanel;
 
-pub struct App {}
+use crate::game::Game;
+
+pub struct App {
+    gs: Game,
+}
 
 impl App {
     pub fn new(_cc: &eframe::CreationContext<'_>) -> Self {
-        Self {}
+        Self { gs: Game::new() }
     }
 }
 

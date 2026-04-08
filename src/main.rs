@@ -1,6 +1,7 @@
 use eframe::NativeOptions;
 
 mod app;
+mod game;
 mod num;
 
 fn main() {
