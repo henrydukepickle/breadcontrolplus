@@ -11,7 +11,7 @@ impl App {
 impl eframe::App for App {
     fn ui(&mut self, ui: &mut eframe::egui::Ui, frame: &mut eframe::Frame) {
         CentralPanel::default().show_inside(ui, |ui| {
-            ui.label("AAA");
+            ui.label("AAAA");
         });
     }
 }
