@@ -3,6 +3,7 @@ use eframe::NativeOptions;
 mod app;
 mod game;
 mod num;
+mod timed_button;
 
 fn main() {
     eframe::run_native(
