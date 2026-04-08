@@ -45,6 +45,13 @@ pub struct BigFloat {
     pub exp: i128,
 }
 
+#[macro_export]
+macro_rules! n {
+    ($e:expr) => {
+        $crate::num::BigFloat::from($e)
+    };
+}
+
 impl BigFloat {
     pub fn from_float(float: f64) -> Self {
         match float.classify() {
@@ -282,5 +289,17 @@ impl SubAssign for BigFloat {
 impl DivAssign for BigFloat {
     fn div_assign(&mut self, rhs: Self) {
         *self = *self / rhs;
+    }
+}
+
+impl From<f64> for BigFloat {
+    fn from(value: f64) -> Self {
+        Self::from_float(value)
+    }
+}
+
+impl From<i128> for BigFloat {
+    fn from(value: i128) -> Self {
+        Self::from_int(value)
     }
 }
